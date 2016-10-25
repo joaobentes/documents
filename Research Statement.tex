@@ -1,0 +1,63 @@
+\documentclass[]{scrartcl}
+
+%opening
+\title{Service Platform for Continuous Delivery of Assisted Living Systems}
+
+\author{
+Jo\~{a}o Bentes\\
+School of Information Technology, Halmstad University\\
+%\affaddr{1932 Wallamaloo Lane}\\
+Halmstad, Sweden\\
+joao.bentes@hh.se
+}
+
+\begin{document}
+
+\maketitle
+
+Ambient Assisted Living (AAL) is an emerging multidisciplinary field which aims at making use of information and communication technology to develop solutions for ageing well at home, in the community and at work \cite{living2011ambient}.
+Smart homes have been used as the base for AAL systems. 
+According to Diane J. Cook and Michael Youngblood, a smart home is defined as \textit{``one that is able to acquire and apply knowledge about its inhabitants and their surroundings in order to adapt to the inhabitants and meet the goals of comfort and efficiency"}.
+
+However, approaches based on smart homes do not fully address the aim of Ambient Assisted Living. 
+One aspect not considered is: \textit{what doest it happen when the user leaves the home?}. 
+The architectures of smart home systems do not employ mechanisms to expand the system coverage out of the home environment boundaries, thus limiting the possibility to provide assistance where needed.
+
+To fully provide assistance for users, those assistive services should be provided seamlessly and continuously regardless of the user's location. 
+Smart homes should cooperate with other intelligent environments to provision services for users on the go. 
+This cooperation should also be extended to mobile environments (e.g. smart phones, tablets, smart walkers etc), covering outdoor spaces (e.g. on the street, squares etc), and stationary but non-intelligent environment.
+This idea of assistive technologies serving the user regardless his location can de defined as continuous assistance, which is illustrated in the \textit{Reference Scenario}.
+
+\textbf{Reference Scenario:} \textit{Eduard is 86 years old and lives alone in a smart home.
+	He should be physical active during the day, but not in excess due to his heart condition.
+	To keep track of it, a service called \textit{ActBit} monitors his level of activity on the go.
+	While at home, this service makes inferences based on data collected from a set of infrared motion sensors spread out the home environment. 
+	Every second day, Eduard meets some friends in a caf\'{e} nearby his house.
+	When he leaves the home, the provisioning of \textit{ActBit} is handed over from the smart home to the his smart phone.
+	While outdoors, \textit{ActBit} infers activity based on data from the accelerometer and gyroscope of the phone.
+	During the time in the caf\'{e}, Eduard leaves his smart phone on the table while chatting with friends, so \textit{ActBit} switches its method for one that is able to perform the required inference based on images provided by the surveillance cameras of the shop.} 
+
+Some of the proposed smart home systems are able to partially address the concept of continuous assistance introduced in this research.
+Due to its cloud-oriented architecture and the fact that all resources are implemented in Javascript, meSchup \cite{kubitza2015towards} allows applications to be transferred among different environments, even those not owned by the same user.  
+CASAS \cite{CASAS} implements the concept of bridges, which can be used to connect a CASAS environment to other CASAS environments, allowing the same service be provided in different homes.
+Uranus \cite{Uranus} has a two-tier (residential and mobile) architecture, where mobile devices and the intelligent environment interact to provide services. The mobile-tier enables services to be provided even outside the home environment. 
+CoCaMAAL \cite{cocamaal} implements the concept of virtual community by employing a cloud-oriented architecture and an unified context generation to represent users, devices and computational server. 
+Although not explored yet, services could be provisioned in all environments that belongs the virtual community.
+UniversAAL \cite{hanke2011universaal} employs a component called AAL space gateway, which interfaces communication between AAL spaces (environments equipped with UniversAAL) and third-party Web Services.
+It indicates that services could be available in any of those AAL spaces.
+
+On one hand, CASAS, meSchup, UniversAAL and CoCaMAAL propose some mechanisms to deliver assistance while the user is indoors, but no explicit support is offered as the user leave the home environment. 
+On the other hand, the two-tier architecture of Uranus supports a certain level of continuous assistance, it does not support cooperation between different intelligent environments, then limiting the service availability to the home environment and, when outside, to the mobile-pier's battery-life.
+Uranus was conceived for health monitoring purposes only, then it does not address the acting capability mentioned in the scenario. 
+
+In that sense, there is not a single platform able to fully provide continuous assistance for users on the go, both indoors and outdoor. To overcome these obstacles, this research aims at designing a generic architecture for a service platform with support for continuous delivery of assisted living systems at home and beyond. The development of this work will be based on the following research questions:
+\begin{itemize}
+	\item \textbf{RQ1}: What are the functional and non-functional requirements for a continuous assisted living system?
+	\item \textbf{RQ2}: What are architectural requirements for a service platform to support continuous assisted living systems?
+	\item \textbf{RQ3}: To what extent can different service platforms collaborate to deliver continuous assistance for the user on the go?
+\end{itemize}
+
+\bibliographystyle{abbrv}
+\bibliography{bib}
+
+\end{document}
